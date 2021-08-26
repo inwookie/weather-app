@@ -1,20 +1,94 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, StatusBar } from "react-native";
 import PropTypes from "prop-types";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
-export default function Weather({ temp }) {
+const weatherOptions = {
+  Thunderstorm: {
+    iconName: "thunderstorm-outline",
+    gradient: ["#525252", "#3d72b4"],
+  },
+  Drizzle: {
+    iconName: "umbrella-outline",
+    gradient: ["#085078", "#85D8CE"],
+  },
+  Rain: {
+    iconName: "rainy-outline",
+    gradient: ["#2c3e50", "#2980b9"],
+  },
+  Snow: {
+    iconName: "snow-outline",
+    gradient: ["#83a4d4", "#E2E2E2"],
+  },
+  Atmosphere: {
+    iconName: "partly-sunny-outline",
+    gradient: ["#FF5F6D", "#FFC371"],
+  },
+  Clear: {
+    iconName: "sunny-outline",
+    gradient: ["#FF8008", "#ffe259"],
+  },
+  Clouds: {
+    iconName: "cloud-outline",
+    gradient: ["#304352", "#859398"],
+  },
+  Mist: {
+    iconName: "water-outline",
+    gradient: ["#1e3c72", "#bdc3c7"],
+  },
+  Smoke: {
+    iconName: "skull-outline",
+    gradient: ["#333333", "#FDC830"],
+  },
+  Haze: {
+    iconName: "reorder-three-outline",
+    gradient: ["#ADA996", "#DBDBDB"],
+  },
+  Dust: {
+    iconName: "reorder-three-outline",
+    gradient: ["#BA8B02", "#181818"],
+  },
+  Fog: {
+    iconName: "reorder-three-outline",
+    gradient: ["#757F9A", "#D7DDE8"],
+  },
+
+  Sand: {
+    iconName: "reorder-three-outline",
+    gradient: ["#3E5151", "#DECBA4"],
+  },
+  Ash: {
+    iconName: "flame-outline",
+    gradient: ["#556270", "#FF6B6B"],
+  },
+  Squall: {
+    iconName: "cloud",
+    gradient: ["#292E49", "#BBD2C5"],
+  },
+  Tornado: {
+    iconName: "filter",
+    gradient: ["#536976", "#292E49"],
+  },
+};
+
+export default function Weather({ temp, condition }) {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={weatherOptions[condition].gradient}
+      style={styles.container}
+    >
+      <StatusBar barStyle="light-content"></StatusBar>
       <View style={styles.halfContainer}>
-        <MaterialCommunityIcons
+        <Ionicons
           size={96}
-          name="weather-lightning-rainy"
-        ></MaterialCommunityIcons>
+          name={weatherOptions[condition].iconName}
+          color="white"
+        ></Ionicons>
         <Text style={styles.temp}>{temp}°</Text>
       </View>
       <View style={styles.halfContainer}></View>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -48,6 +122,8 @@ const styles = StyleSheet.create({
   },
   temp: {
     fontSize: 42,
+    color: "white",
+    // marginLeft: 5,
   },
   halfContainer: {
     flex: 1,
