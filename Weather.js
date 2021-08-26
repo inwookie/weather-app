@@ -104,22 +104,26 @@ const weatherOptions = {
   },
 };
 
-export default function Weather({ temp, condition }) {
+export default function Weather({ temp, condition, name }) {
   return (
     <LinearGradient
       colors={weatherOptions[condition].gradient}
       style={styles.container}
     >
       <StatusBar barStyle="light-content"></StatusBar>
+      <View style={styles.topContainer}>
+        <Ionicons size={20} name={"map"} color="white" />
+        <Text style={styles.locationText}>{name}</Text>
+      </View>
       <View style={styles.halfContainer}>
         <Ionicons
           size={96}
           name={weatherOptions[condition].iconName}
           color="white"
         ></Ionicons>
-        <Text style={styles.temp}>{temp}°</Text>
+        <Text style={styles.temp}>{temp}°C</Text>
       </View>
-      <View style={styles.textContainer}>
+      <View style={{ ...styles.textContainer, ...styles.bottomContainer }}>
         <Text style={styles.title}>{weatherOptions[condition].title}</Text>
         <Text style={styles.subtitle}>
           {weatherOptions[condition].subtitle}
@@ -149,36 +153,50 @@ Weather.propTypes = {
     "Squall",
     "Tornado",
   ]).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 0,
   },
   temp: {
     marginTop: 5,
     fontSize: 40,
     color: "white",
-    marginLeft: 5,
+    // marginLeft: 5,
+    marginTop: 10,
     fontWeight: "300",
   },
-  halfContainer: {
+  topContainer: {
     flex: 1,
+    paddingTop: 100,
     justifyContent: "center",
+    alignItems: "flex-start",
+    flexDirection: "row",
+    marginBottom: 40,
+  },
+  halfContainer: {
+    flex: 4,
+    justifyContent: "flex-start",
     alignItems: "center",
+  },
+  bottomContainer: {
+    flex: 4,
+    justifyContent: "center",
+    alignItems: "flex-start",
   },
   title: {
     color: "white",
     fontSize: 44,
-    fontWeight: "400",
+    fontWeight: "300",
     marginBottom: 10,
     textAlign: "left",
   },
   subtitle: {
     color: "white",
     fontWeight: "300",
-    fontSize: 22,
+    fontSize: 20,
     textAlign: "left",
   },
   textContainer: {
@@ -186,5 +204,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     justifyContent: "center",
     flex: 1,
+  },
+  locationText: {
+    color: "white",
+    fontSize: 17,
+    fontWeight: "500",
+    marginLeft: 7,
   },
 });
