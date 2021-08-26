@@ -119,7 +119,7 @@ export default function Weather({ temp, condition }) {
         ></Ionicons>
         <Text style={styles.temp}>{temp}°</Text>
       </View>
-      <View style={{ ...styles.halfContainer, ...styles.textContainer }}>
+      <View style={styles.textContainer}>
         <Text style={styles.title}>{weatherOptions[condition].title}</Text>
         <Text style={styles.subtitle}>
           {weatherOptions[condition].subtitle}
@@ -154,13 +154,14 @@ Weather.propTypes = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    paddingTop: 0,
   },
   temp: {
-    fontSize: 42,
+    marginTop: 5,
+    fontSize: 40,
     color: "white",
-    // marginLeft: 5,
+    marginLeft: 5,
+    fontWeight: "300",
   },
   halfContainer: {
     flex: 1,
@@ -170,16 +171,20 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 44,
-    fontWeight: "300",
+    fontWeight: "400",
     marginBottom: 10,
+    textAlign: "left",
   },
   subtitle: {
     color: "white",
-    fontWeight: "400",
+    fontWeight: "300",
     fontSize: 22,
+    textAlign: "left",
   },
   textContainer: {
-    paddingHorizontal: 20,
     alignItems: "flex-start",
+    paddingHorizontal: 40,
+    justifyContent: "center",
+    flex: 1,
   },
 });
