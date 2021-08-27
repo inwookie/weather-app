@@ -39,7 +39,7 @@ const weatherOptions = {
     iconName: "sunny-outline",
     gradient: ["#FF8008", "#ffe259"],
     title: "Clear",
-    subtitle: "Such a great day to walk outside",
+    subtitle: "Such a great day to walk outside.",
   },
   Clouds: {
     iconName: "cloud-outline",
@@ -104,7 +104,7 @@ const weatherOptions = {
   },
 };
 
-export default function Weather({ temp, condition, name }) {
+export default function Weather({ temp, condition, name, temp_min, temp_max }) {
   return (
     <LinearGradient
       colors={weatherOptions[condition].gradient}
@@ -122,6 +122,10 @@ export default function Weather({ temp, condition, name }) {
           color="white"
         ></Ionicons>
         <Text style={styles.temp}>{temp}°C</Text>
+        <View style={styles.tempDif}>
+          <Text style={styles.tempDifText}>H:{temp_max}°</Text>
+          <Text style={styles.tempDifText}>L:{temp_min}°</Text>
+        </View>
       </View>
       <View style={{ ...styles.textContainer, ...styles.bottomContainer }}>
         <Text style={styles.title}>{weatherOptions[condition].title}</Text>
@@ -161,12 +165,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   temp: {
-    marginTop: 5,
-    fontSize: 40,
+    fontSize: 46,
     color: "white",
     // marginLeft: 5,
     marginTop: 10,
-    fontWeight: "300",
+    fontWeight: "400",
   },
   topContainer: {
     flex: 1,
@@ -174,7 +177,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    marginBottom: 40,
+    marginBottom: 20,
   },
   halfContainer: {
     flex: 4,
@@ -210,5 +213,15 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "500",
     marginLeft: 7,
+  },
+  tempDif: {
+    flexDirection: "row",
+    color: "white",
+  },
+  tempDifText: {
+    fontSize: 15,
+    color: "white",
+    paddingHorizontal: 4,
+    paddingVertical: 2,
   },
 });
