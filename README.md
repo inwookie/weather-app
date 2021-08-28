@@ -1,29 +1,26 @@
-# weather-app
-
-Learning React Native by Building a Simple Weather App
-
 # React-Native Weather App
 
-사용자의 위치를 기반으로 날씨와 온도를 알려주는 앱<br /><br />
-<img align="center" src="demo/01.png" width="162">
-<img align="center" src="demo/02.png" width="162">
-<img align="center" src="demo/03.png" width="162">
-<img align="center" src="demo/04.png" width="162">
-<img align="center" src="demo/05.png" width="162">
-<img align="center" src="demo/06.png" width="162">
-<img align="center" src="demo/07.png" width="162">
-<img align="center" src="demo/08.png" width="162">
-<img align="center" src="demo/09.png" width="162">
-<img align="center" src="demo/10.png" width="162">
-<img align="center" src="demo/11.png" width="162">
-<img align="center" src="demo/12.png" width="162">
-<img align="center" src="demo/13.png" width="162">
-<img align="center" src="demo/14.png" width="162">
-<img align="center" src="demo/15.png" width="162">
-<img align="center" src="demo/16.png" width="162">
-<img align="center" src="demo/17.png" width="162">
+사용자의 위치를 기반으로 날씨와 온도를 알려주는 앱
+<br /><br />
+<img align="center" src="demo/01.PNG" width="162">
+<img align="center" src="demo/02.PNG" width="162">
+<img align="center" src="demo/03.PNG" width="162">
+<img align="center" src="demo/04.PNG" width="162">
+<img align="center" src="demo/05.PNG" width="162">
+<img align="center" src="demo/06.PNG" width="162">
+<img align="center" src="demo/07.PNG" width="162">
+<img align="center" src="demo/08.PNG" width="162">
+<img align="center" src="demo/09.PNG" width="162">
+<img align="center" src="demo/10.PNG" width="162">
+<img align="center" src="demo/11.PNG" width="162">
+<img align="center" src="demo/12.PNG" width="162">
+<img align="center" src="demo/13.PNG" width="162">
+<img align="center" src="demo/14.PNG" width="162">
+<img align="center" src="demo/15.PNG" width="162">
+<img align="center" src="demo/16.PNG" width="162">
+<img align="center" src="demo/17.PNG" width="162">
 
-## 🔥 Stack
+## Stack
 
 ### Front-end
 
