@@ -1,6 +1,6 @@
 # React-Native Weather App
 
-사용자의 위치를 기반으로 날씨와 온도를 알려주는 앱
+Weather app that tells the user a basic condition of the weathehr, high and min temperature of the day, and current temperature based on their location. 
 <br /><br />
 <div align="center" >
   <img src="demo/01.PNG" width="162">
