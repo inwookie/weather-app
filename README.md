@@ -1,6 +1,6 @@
 # React-Native Weather App
 
-Weather app that tells the user a basic condition of the weathehr, high and min temperature of the day, and current temperature based on their location. 
+Weather app that tells the user a basic condition of the weather, high and min temperature of the day, and current temperature based on their location. 
 <br /><br />
 <div align="center" >
   <img src="demo/01.PNG" width="162">
