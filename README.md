@@ -1,14 +1,14 @@
 # React-Native Weather App
 
 Weather app that tells the user a basic condition of the weather, high and min temperature of the day, and current temperature based on their location. 
-<br /><br />
+<br />
 ## Demo 
 [Weather App](https://expo.dev/@inwookie/weather-app)
 
 ### Scan to open
 <img src="demo/demo.png" width="200">
 
-
+### Preview
 <div align="center" >
   <img src="demo/01.PNG" width="162">
   <img src="demo/02.PNG" width="162">
