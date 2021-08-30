@@ -2,12 +2,11 @@
 
 Weather app that tells the user a basic condition of the weather, high and min temperature of the day, and current temperature based on their location. 
 <br /><br />
-## �Demo 
-(Weather App)[https://expo.dev/@inwookie/weather-app]
+## Demo 
+[Weather App](https://expo.dev/@inwookie/weather-app)
 
 ### Scan to open
-#### Scan this QR code with your phone to load this project immediately.
-<img src="demo/demo.PNG" width="200">
+<img src="demo/demo.png" width="200">
 
 
 <div align="center" >
